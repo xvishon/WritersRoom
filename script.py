@@ -1,5 +1,13 @@
 import gradio as gr
 
+
+def ui():
+  with gr.Tab("Writer's Room"):
+    textbox = gr.Textbox(label="Write your starting text here...", lines=4)
+    generate_button = gr.Button(value="Generate", elem_id="generate-btn")
+  return textbox, generate_button
+
+
 # Placeholder function for your text generation model (replace with your actual implementation)
 def generate_text(text):
   # Replace this with your logic to call your text generation model and return the generated text
